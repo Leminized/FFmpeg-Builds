@@ -1,4 +1,4 @@
-Attempt to automatically compile the nonefree Varian.
+Attempt to automatically build the nonfree varian.     ——L.
 
 # FFmpeg Static Auto-Builds
 
