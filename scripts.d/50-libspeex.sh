@@ -3,7 +3,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://gitlab.xiph.org/xiph/speex.git"
-SCRIPT_COMMIT="7708702956294713e284451a3ea3bae598835821"
+SCRIPT_COMMIT="05895229896dc942d453446eba6f9f5ddcf95422"
 
 ffbuild_enabled() {
     return 0

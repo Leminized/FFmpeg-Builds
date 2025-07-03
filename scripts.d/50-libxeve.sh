@@ -2,8 +2,8 @@
 
 #!/bin/bash
 
-SCRIPT_REPO="https://github.com/eunmg/xeve.git"
-SCRIPT_COMMIT="5b5e783457a3e743a6d71b312788e995f512726d"
+SCRIPT_REPO="https://github.com/mpeg5/xeve.git"
+SCRIPT_COMMIT="7b214663da0140f7ee66adefa6357c45070c818c"
 
 ffbuild_enabled() {
     return 0

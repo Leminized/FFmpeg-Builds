@@ -2,8 +2,8 @@
 
 #!/bin/bash
 
-SCRIPT_REPO="https://github.com/tim-lebedkov/libgsm.git"
-SCRIPT_COMMIT="58453435ded28532494a0815354519918a55639f"
+SCRIPT_REPO="https://github.com/timothytylee/libgsm.git"
+SCRIPT_COMMIT="98f1708fb5e06a0dfebd58a3b40d610823db9715"
 
 ffbuild_enabled() {
     return 0

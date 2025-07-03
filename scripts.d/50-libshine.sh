@@ -3,7 +3,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/toots/shine.git"
-SCRIPT_COMMIT="e30a133f93766620583526189914619be13e8580"
+SCRIPT_COMMIT="ab5e3526b64af1a2eaa43aa6f441a7312e013519"
 
 ffbuild_enabled() {
     return 0

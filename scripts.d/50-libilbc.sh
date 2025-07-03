@@ -2,8 +2,8 @@
 
 #!/bin/bash
 
-SCRIPT_REPO="https://github.com/google/libilbc.git"
-SCRIPT_COMMIT="d33454223a676b91485601a4e1a03e1e2d780775"
+SCRIPT_REPO="https://github.com/TimothyGu/libilbc.git"
+SCRIPT_COMMIT="6adb26d4a4e159cd66d4b4c5e411cd3de0ab6b5e"
 
 ffbuild_enabled() {
     return 0
