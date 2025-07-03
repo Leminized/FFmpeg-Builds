@@ -9,6 +9,13 @@ ffbuild_enabled() {
     return 0
 }
 
+ffbuild_dockerdl() {
+    # The default git-mini-clone can fail for some repos/commits.
+    # A full(er) clone followed by a checkout is more robust.
+    git clone --filter=blob:none "$SCRIPT_REPO" .
+    git checkout "$SCRIPT_COMMIT"
+}
+
 ffbuild_dockerbuild() {
     # liblc3 uses Meson
     local myconf=(
