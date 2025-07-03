@@ -14,8 +14,7 @@ ffbuild_dockerdl() {
 }
 
 ffbuild_dockerbuild() {
-    ./autogen.sh
-
+    # This library does not have an autogen.sh script.
     local myconf=(
         --prefix="$FFBUILD_PREFIX"
         --disable-shared

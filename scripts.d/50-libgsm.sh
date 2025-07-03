@@ -14,19 +14,15 @@ ffbuild_dockerdl() {
 }
 
 ffbuild_dockerbuild() {
-    # libgsm uses a simple Makefile, requiring manual intervention
-    sed -i 's|/usr/local|$(DESTDIR)/usr/local|' Makefile
-    sed -i 's|CFLAGS =|CFLAGS +=|' Makefile
+    # This makefile is non-standard.
+    # We build the library manually and copy the required files.
+    make -j$(nproc) lib/libgsm.a
 
-    make -j$(nproc) \
-        CC="$CC" \
-        DESTDIR="$FFBUILD_PREFIX" \
-        PREFIX="" \
-        install
-
-    # It installs to /usr/local, so we move it to the correct prefix
-    mv "$FFBUILD_PREFIX/usr/local/"* "$FFBUILD_PREFIX/"
-    rm -rf "$FFBUILD_PREFIX/usr"
+    # Manually install the files to the correct locations
+    install -d "$FFBUILD_PREFIX"/lib
+    install -d "$FFBUILD_PREFIX"/include
+    install -m644 lib/libgsm.a "$FFBUILD_PREFIX"/lib/
+    install -m644 inc/gsm.h "$FFBUILD_PREFIX"/include/
 }
 
 ffbuild_configure() {
